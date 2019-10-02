@@ -9,22 +9,26 @@ public class Bird extends Animals
     }
 
     @Override
-    public String move() {
+    public String move()
+    {
         return "fly";
     }
 
     @Override
-    public String breathe() {
+    public String breathe()
+    {
         return "lungs";
     }
 
     @Override
-    public String reproduce() {
+    public String reproduce()
+    {
         return "eggs";
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return '\n' + "Bird{" + "name=" + name + ", fuel=" + fuel + ", year discovered=" + yearDiscovered + '}';
     }
 }
