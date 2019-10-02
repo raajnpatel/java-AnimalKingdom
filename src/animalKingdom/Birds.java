@@ -3,7 +3,7 @@ package  animalKingdom;
 public class Bird extends Animals
 {
 
-    public Bird(String name, int fuel, int yearDiscovered)
+    public Bird(String name, int yearDiscovered)
     {
         super(name, fuel, yearDiscovered);
     }

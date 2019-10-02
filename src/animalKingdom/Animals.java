@@ -6,24 +6,22 @@ public abstract class Animals
     int number;
     String name;
     int yearDiscovered;
-    int fuel;
 
-    public Animal(int number, String name, int yearDiscovered, int fuel)
+    public Animal(int number, String name, int yearDiscovered)
     {
         animalID++;
         number = animalID;
         this.name = name;
         this.yearDiscovered = yearDiscovered;
-        this.fuel = fuel;
     }
 
     public abstract String move();
     public abstract String breathe();
     public abstract String reproduce();
 
-    public int getFuel()
+    public int eat()
     {
-        return fuel;
+        return "Yum";
     }
 
     public int getNumber()
@@ -39,5 +37,17 @@ public abstract class Animals
     public int getYearDiscovered()
     {
         return yearDiscovered;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Animals{" +
+                "name='" + name + '\'' +
+                ", yearDiscovered=" + yearDiscovered +
+                ", breathes='" + breathes + '\'' +
+                ", moves='" + moves + '\'' +
+                ", reproduces='" + reproduces + '\'' +
+                '}';
     }
 }
