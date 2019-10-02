@@ -86,5 +86,13 @@ public class Main {
         printAnimals(zootopia, animal -> animal.getYearDiscovered()==1758);
         System.out.println();
         System.out.println();
+
+        //stretch! -sorts alphabetically, then prints out animals that are mammals.-
+        zootopia.sort((animal1, animal2) -> animal1.getName().compareToIgnoreCase(animal2.getName()));
+        for (Animals animal : zootopia) {
+            if (animal instanceof Mammals) {
+                System.out.println("Mammalian detected, name: "+ animal.getName());
+            }
+        }
     }
 }
