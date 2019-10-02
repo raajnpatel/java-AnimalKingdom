@@ -1,34 +1,32 @@
-package  animalKingdom;
+package animalKingdom;
 
-public class Mammal extends Animals
-{
 
-    public Mammal(String name, int yearDiscovered)
-    {
-        super(name, fuel, yearDiscovered);
+public class Mammals extends Animals {
+
+
+    public Mammals(String name, int yearDiscovered) {
+        super(name, yearDiscovered);
+
     }
 
     @Override
-    public String move()
-    {
+    public String moves() {
         return "walk";
     }
-
     @Override
-    public String breathe()
-    {
+    public String breathes() {
         return "lungs";
     }
-
     @Override
-    public String reproduce()
-    {
+    public String reproduces() {
         return "live births";
     }
-
     @Override
-    public String toString()
-    {
-        return '\n' + "Mammal{" + "name=" + name +  ", fuel=" + fuel + ", year discovered=" + yearDiscovered + '}';
+    public String getName() {
+        return name;
+    }
+    @Override
+    public int getYearDiscovered() {
+        return yearDiscovered;
     }
 }

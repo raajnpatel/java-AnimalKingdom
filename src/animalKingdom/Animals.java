@@ -1,47 +1,45 @@
-package  animalKingdom;
+package animalKingdom;
 
-public abstract class Animals
-{
-    private static int animalID = 0;
-    int number;
-    String name;
-    int yearDiscovered;
 
-    public Animal(int number, String name, int yearDiscovered)
-    {
-        animalID++;
-        number = animalID;
+public abstract class Animals {
+
+
+    private int maxId = 0;
+    private int id;
+    public int food = 0;
+    public String name;
+    public int yearDiscovered;
+    public String moves;
+    public String breathes;
+    public String reproduces;
+
+
+    public Animals (String name, int yearDiscovered) {
+        maxId++;
+        this.id = maxId;
+        this.food = food;
         this.name = name;
         this.yearDiscovered = yearDiscovered;
+        this.moves = moves;
+        this.breathes = breathes;
+        this.reproduces = reproduces;
     }
 
-    public abstract String move();
-    public abstract String breathe();
-    public abstract String reproduce();
 
-    public int eat()
-    {
-        return "Yum";
+    public int eats(int n) {
+        return this.food += n;
     }
 
-    public int getNumber()
-    {
-        return number;
-    }
 
-    public String getName()
-    {
-        return name;
-    }
+    public abstract String getName();
+    public abstract int getYearDiscovered();
+    public abstract String moves();
+    public abstract String breathes();
+    public abstract String reproduces();
 
-    public int getYearDiscovered()
-    {
-        return yearDiscovered;
-    }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Animals{" +
                 "name='" + name + '\'' +
                 ", yearDiscovered=" + yearDiscovered +
